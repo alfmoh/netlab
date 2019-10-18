@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "formy"
+    }
+  },
+  "defaultProject": "formy",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }
