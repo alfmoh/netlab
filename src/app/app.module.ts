@@ -12,9 +12,10 @@ import { InMemoryWebApiModule } from "angular-in-memory-web-api";
 import { EffectsModule } from "@ngrx/effects";
 import { MessageEffects } from "./effects/message.effects";
 import { HttpClientModule } from "@angular/common/http";
+import { HomeComponent } from "./home/home.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

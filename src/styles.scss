@@ -1,1 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap";
+
+.btn--round {
+    border-radius: 40px;
+}
+
+.btn--bold {
+    font-weight: bold;
+    padding: 10px 35px;
+}
