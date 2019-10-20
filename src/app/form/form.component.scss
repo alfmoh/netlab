@@ -35,3 +35,12 @@
     width: 20rem;
     height: 3rem;
 }
+
+.is--invalid  {
+  border: 2px solid red;
+  box-shadow: none;
+}
+.is--valid  {
+  border: 2px solid green;
+  box-shadow: none;
+}

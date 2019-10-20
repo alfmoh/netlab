@@ -7,6 +7,11 @@ import { Component, OnInit } from "@angular/core";
 })
 export class FormComponent implements OnInit {
   constructor() {}
+  model: any = {};
 
   ngOnInit() {}
+
+  onSubmit() {
+    console.log(this.model);
+  }
 }

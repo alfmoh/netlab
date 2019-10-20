@@ -7,7 +7,7 @@ import {
 } from "@angular/core";
 
 @Directive({
-  selector: "input"
+  selector: "input,select"
 })
 export class InputDirective {
   @Input() public value: any;
@@ -15,7 +15,8 @@ export class InputDirective {
   toggler = true;
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
-  @HostListener("keyup", ["$event"])
+  @HostListener("keyup")
+  @HostListener("change")
   onkeyup() {
     if (this.el.nativeElement.value !== "" && this.toggler === true) {
       this.el.nativeElement.classList.remove("form-control");
