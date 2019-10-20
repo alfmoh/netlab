@@ -36,11 +36,31 @@
     height: 3rem;
 }
 
-.is--invalid  {
-  border: 2px solid red;
-  box-shadow: none;
+.is--invalid {
+    border: 2px solid #fa8cb8;
+    box-shadow: none;
 }
-.is--valid  {
-  border: 2px solid green;
-  box-shadow: none;
+
+.is--valid {
+    border: 2px solid #13c98a;
+    box-shadow: none;
+}
+
+.fa {
+    position: relative;
+    left: -1.625rem;
+    top: -2.8125rem;
+    font-size: 1.2rem;
+    color: #7B7B7B;
+    cursor: default;
+    width: 0;
+    float: right;
+}
+
+.mark--error {
+    color: #fa8cb8;
+}
+
+.mark--correct {
+    color: #13c98a;
 }

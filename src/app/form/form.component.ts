@@ -8,6 +8,9 @@ import { Component, OnInit } from "@angular/core";
 export class FormComponent implements OnInit {
   constructor() {}
   model: any = {};
+  topics = [
+    "Тема 1", "Тема 2", "Тема 3", "Тема 4"
+  ];
 
   ngOnInit() {}
 

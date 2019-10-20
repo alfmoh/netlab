@@ -9,6 +9,8 @@
         #username="ngModel"
         [ngClass]="{'is--invalid': username.touched && username.invalid,'is--valid': username.valid}"
         class="user-form__input user-form__fullname form-control input--stretch">
+        <i [hidden]="!(username.touched && username.invalid)" class="fa fa-exclamation-circle mark--error"></i>
+        <i [hidden]="!(username.touched && username.valid)" class="fa fa-check-circle mark--correct"></i>
       <input placeholder="Введите ваш e-mail" type="email"
         email
         required
@@ -17,13 +19,15 @@
         #email = "ngModel"
         [ngClass]="{'is--invalid': email.touched && email.invalid,'is--valid': email.valid}"
         class="user-form__input user-form__email form-control input--stretch">
-      <select placeholder="Тема сообщения" class="user-form__input user-form__topic form-control input--stretch">
+        <i [hidden]="!(email.touched && email.invalid)" class="fa fa-exclamation-circle mark--error"></i>
+        <i [hidden]="!(email.touched && email.valid)" class="fa fa-check-circle mark--correct"></i>
+      <select placeholder="Тема сообщения"
+        [(ngModel)] ="model.topic"
+        name="topic"
+        #topic="ngModel"
+        class="user-form__input user-form__topic form-control input--stretch">
         <option value="" hidden>Тема сообщения</option>
-        <option>Тема 1</option>
-        <option>Тема 2</option>
-        <option>Тема 3</option>
-        <option>Тема 4</option>
-        <option>Тема 5</option>
+        <option *ngFor="let topic of topics" [value]="topic" >{{topic}}</option>
       </select>
       <textarea placeholder="Введите сообщение" type="text" rows="3"
         required
