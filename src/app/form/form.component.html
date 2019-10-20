@@ -1,1 +1,26 @@
-<p>form works!</p>
+<form>
+  <section class="user-form form-group">
+    <section class="user-form-container">
+      <h4 class="user-form__header">Форма для тебя</h4>
+      <input placeholder="Представьтесь пожалуйста" type="text"
+        class="user-form__input user-form__fullname form-control input--stretch">
+      <input placeholder="Введите ваш e-mail" type="text"
+        class="user-form__input user-form__email form-control input--stretch">
+      <select type="text" class="user-form__input user-form__topic form-control input--stretch">
+        <option value="" hidden>Тема сообщения</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <textarea placeholder="Введите сообщение" type="text" rows="3"
+        class="user-form__input user-form__msg form-control input--stretch h-25"></textarea>
+      <section class="user-form-btns">
+        <button class="user-form__btn btn btn-secondary btn--round btn--bold">Сбросить</button>
+        <button class="user-form__btn btn btn-success btn--round btn--bold">Отправить</button>
+      </section>
+    </section>
+  </section>
+
+</form>

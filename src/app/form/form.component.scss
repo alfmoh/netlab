@@ -1,0 +1,37 @@
+.user-form {
+    background-color: #474747;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    &-container {
+        background-color: #fff;
+        margin: 10rem auto;
+        margin-bottom: 0;
+        height: fit-content;
+        padding: 2rem;
+    }
+
+    &__input {
+        margin-bottom: .8rem;
+        color: #000;
+
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+
+    &-btns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__topic {
+        color: #636c72;
+    }
+}
+
+.input--stretch {
+    width: 20rem;
+    height: 3rem;
+}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from "@angular/core";
+import { Store, select } from "@ngrx/store";
+import { selectMessage, State } from "../reducers";
+import { LoadMessages } from "../actions/message.actions";
 
 @Component({
   selector: "app-home",
@@ -6,7 +9,11 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  constructor(private store: Store<State>) {
+    // this.store.pipe(select(selectMessage)).subscribe(console.log);
+  }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.store.dispatch(new LoadMessages());
+  }
 }
