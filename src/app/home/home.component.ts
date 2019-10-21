@@ -1,3 +1,5 @@
+import { MessageState } from "./../reducers/index";
+import { Observable } from "rxjs";
 import { Component, OnInit } from "@angular/core";
 import { Store, select } from "@ngrx/store";
 import { selectMessage, State } from "../reducers";
@@ -9,8 +11,9 @@ import { LoadMessages } from "../actions/message.actions";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
+  data$: Observable<MessageState>;
   constructor(private store: Store<State>) {
-    // this.store.pipe(select(selectMessage)).subscribe(console.log);
+    this.data$ = this.store.pipe(select(selectMessage));
   }
 
   ngOnInit() {

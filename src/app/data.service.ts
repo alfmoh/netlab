@@ -12,16 +12,9 @@ export class DataService implements InMemoryDbService {
     const messages: Message[] = [
       {
         id: 1,
-        username: "Ivan",
-        email: "abc@abc.com",
-        topic: "hello",
-        message: "Hey!!"
-      },
-      {
-        id: 2,
-        username: "Ivan",
-        email: "abc@abc.com",
-        topic: "hello",
+        username: "Иван Иванович",
+        email: "info@mail.com",
+        topic: "Тема 1",
         message: "Hey!!"
       }
     ];

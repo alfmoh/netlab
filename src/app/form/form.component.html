@@ -26,8 +26,8 @@
         name="topic"
         #topic="ngModel"
         class="user-form__input user-form__topic form-control input--stretch">
-        <option value="" hidden>Тема сообщения</option>
-        <option *ngFor="let topic of topics" [value]="topic" >{{topic}}</option>
+        <option class="user-form__option" value="" hidden>Тема сообщения</option>
+        <option class="user-form__option" *ngFor="let topic of topics" [value]="topic" >{{topic}}</option>
       </select>
       <textarea placeholder="Введите сообщение" type="text" rows="3"
         required

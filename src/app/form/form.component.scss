@@ -1,11 +1,13 @@
+@import "~src/assets/scss/styles";
+
 .user-form {
-    background-color: #474747;
+    background-color: $darkGray;
     height: 100vh;
     display: flex;
     justify-content: center;
 
     &-container {
-        background-color: #fff;
+        background-color: $mainWhite;
         margin: 10rem auto;
         margin-bottom: 0;
         height: fit-content;
@@ -14,7 +16,7 @@
 
     &__input {
         margin-bottom: .8rem;
-        color: #000;
+        color: $mainBlack;
 
         &:focus::placeholder {
             color: transparent;
@@ -27,7 +29,7 @@
     }
 
     &__topic {
-        color: #636c72;
+        color: $darkBlue;
     }
 }
 
@@ -37,12 +39,12 @@
 }
 
 .is--invalid {
-    border: 2px solid #fa8cb8;
+    border: 2px solid $lightPink;
     box-shadow: none;
 }
 
 .is--valid {
-    border: 2px solid #13c98a;
+    border: 2px solid $lightGreen;
     box-shadow: none;
 }
 
@@ -51,16 +53,16 @@
     left: -1.625rem;
     top: -2.8125rem;
     font-size: 1.2rem;
-    color: #7B7B7B;
+    color: $lightGray;
     cursor: default;
     width: 0;
     float: right;
 }
 
 .mark--error {
-    color: #fa8cb8;
+    color: $lightPink;
 }
 
 .mark--correct {
-    color: #13c98a;
+    color: $lightGreen;
 }

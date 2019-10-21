@@ -1,8 +1,26 @@
+@import "~src/assets/scss/styles";
+
 .data {
     margin-top: 20px;
     font-weight: 500;
 
     &__desc {
         margin-bottom: 30px;
+    }
+
+    &__button {
+        background-color: $lightGreen;
+        color: $mainWhite;
+        width: 14rem;
+        margin-top: 2rem;
+
+        &:hover {
+            color: $mainWhite;
+            background-color: $darkBlue;
+        }
+
+        &:focus {
+          box-shadow: none;
+        }
     }
 }

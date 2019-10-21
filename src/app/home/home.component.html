@@ -1,5 +1,14 @@
-<div class="data container">
+<div *ngIf="data$ | async as msgs" class="data container">
   <p class="data__title">Form data:</p>
-  <p class="data__desc">Форма пока не заполнена</p>
-  <button routerLink="form" class="data__button btn btn-success btn--round btn--bold">Заполнить форму</button>
+  <div class="data-details">
+    <div *ngFor="let msg of msgs?.messages" class="data-details__detail">
+        <div class="data-details__username"><strong>Фио: </strong> {{msg.username}}</div>
+        <div class="data-details__username"><strong>E-mail: </strong>{{msg.email}}</div>
+        <div class="data-details__username"><strong>Тема: </strong>{{msg.topic}}</div>
+    </div>
+  </div>
+  <p *ngIf="!(msgs?.messages?.length)" class="data__desc">Форма пока не заполнена</p>
+  <button routerLink="form" class="data__button btn btn--round btn--bold">
+    {{msgs?.messages?.length ? 'Изменить' : 'Заполнить форму'}}
+  </button>
 </div>
